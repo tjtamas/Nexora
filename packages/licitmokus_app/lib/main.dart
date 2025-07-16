@@ -8,7 +8,7 @@ import 'themes/app_theme.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-// test change for CI
+//Tesztelesi komment CLI -hoz.
 
   // Firebase inicializálás platformfüggően
   if (kIsWeb) {
