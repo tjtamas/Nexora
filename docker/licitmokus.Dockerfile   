@@ -11,3 +11,8 @@ RUN flutter build web
 # Stage 2: Serve with nginx
 FROM nginx:alpine
 COPY --from=build /app/packages/licitmokus_app/build/web /usr/share/nginx/html
+
+# docker/licitmokus.Dockerfile
+
+# ... a végére csak ennyit:
+# dummy change to trigger GitHub Action
