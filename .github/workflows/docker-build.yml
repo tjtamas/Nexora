@@ -8,7 +8,7 @@ on:
       - main
     paths:
       - 'packages/licitmokus_app/**'
-      - 'docker/licitmokus.Dockerfile'
+      - 'docker/Licitmokus.Dockerfile'
 
 jobs:
   build-and-push:
@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: docker/licitmokus.Dockerfile
+          file: docker/Licitmokus.Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/licitmokus_web:latest
           platforms: linux/amd64,linux/arm64
