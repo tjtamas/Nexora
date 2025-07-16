@@ -8,6 +8,8 @@ import 'themes/app_theme.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+// test change for CI
+
   // Firebase inicializálás platformfüggően
   if (kIsWeb) {
     await Firebase.initializeApp(
