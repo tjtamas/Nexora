@@ -9,7 +9,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
 
-
+//Testing 
   // Firebase inicializálás platformfüggően
   if (kIsWeb) {
     await Firebase.initializeApp(
