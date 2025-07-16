@@ -1,5 +1,6 @@
 # Stage 1: Build Flutter web app
-FROM ghcr.io/cirruslabs/flutter:3.22.1 AS build
+FROM dart:stable AS build
+
 
 WORKDIR /app
 COPY ./packages/licitmokus_app /app/packages/licitmokus_app
