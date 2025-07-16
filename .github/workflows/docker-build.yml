@@ -21,6 +21,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check if Dockerfile is available
+        run: |
+          echo "🕵️ Listing docker/ directory:"
+          ls -l docker/
+          if [ ! -f docker/licitmokus.Dockerfile ]; then
+            echo "❌ ERROR: docker/licitmokus.Dockerfile not found!"
+            exit 1
+          else
+            echo "✅ Dockerfile found!"
+          fi
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
@@ -41,4 +52,3 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/licitmokus_web:latest
           platforms: linux/amd64,linux/arm64
-
